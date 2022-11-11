@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <h1>Perpetrator</h1>
+    <p>SELECT * FROM studentalert.perpetrator</p>
+    <p>Returns all perpetrators from table perpetrator</p>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <th>perpetrator id</th>
+        <th>height</th>
+        <th>description</th>
+        <th>incident id</th>
+      </tr>
+      {% for item in data %}
+      <tr>
+        <td>{{item[0]}}</td>
+        <td>{{item[1]}}</td>
+        <td>{{item[2]}}</td>
+        <td>{{item[3]}}</td>   
+      </tr>
+      {% endfor %}
+    </table>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Index
+    </title>
+  </head>
+  <body>
+    <h1>
+      Index
+    </h1>
+    <dl>
+    <dt>Schema Tables</dt>
+    <dd><a href="/incident", target="_self">incidents</a></dd>
+    <dd><a href="/itemstaken", target="_self">items taken</a></dd>
+    <dd><a href="/location", target="_self">location</a></dd>
+    <dd><a href="/perpetrator", target="_self">perpetrator</a></dd>
+    <dd><a href="/universityresponse", target="_self">university response</a></dd>
+    <dd><a href="/victim", target="_self">victim</a></dd>
+    <dt>Armed Incidents</dt>
+    <dd>All incidents listed as "armed" <a href="/armed", target="_self">127.0.0.1:5000/armed</a></dd>
+    <dt>Carjackings</dt>
+    <dd>Number of carjacking incidents <a href="/numcarjackings", target="_self">127.0.0.1:5000/numcarjackings</a></dd>
+    <dd>Incident indexes of carjacking incidents <a href="/carjackings", target="_self">127.0.0.1:5000/carjackings</a></dd>
+    <dt>Sample Queries from Presentation</dt>
+    <dd>Show number of incidents for any given date <a href="/incidentsbydate", target="_self">127.0.0.1:5000/incidentsbydate</a></dd>
+    <dd>Show number of incidents that occured at the same location <a href="/incidentsbylocation", target="_self">127.0.0.1:5000/incidentsbylocation</a></dd>
+    <dt>Harder Queries</dt>
+    <dd>Return incident details of all Armed incidents (incident.armed = 1) that occured on Euclid <a href="/armedeuclid", target="_self">127.0.0.1:5000/armedeuclid</a> </dd>
+    <dd>Return victim id and description of all carjackings and other "armed" incidents that occured on Euclid and the University had a response of 1 to (University made no lasting changes) <a href="/carjackingone", target="_self">127.0.0.1/5000:/carjackingone</a></dd>
+    </dl>
+    <br>
+    <br>
+    <p>Made for CSDS 341</p>
+  </body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1>Incidents per date</h1>
+    <p>SELECT COUNT(incidentid), date FROM studentalert.incident GROUP BY date</p>
+    <p>Returns the number of incidents that occured on a specific date</p>
+    <table>
+      <tr>
+        <th>Count(date)</th>
+        <th>date</th>
+      </tr>
+      {% for item in data %}
+      <tr>
+        <td>{{item[0]}}</td>
+        <td>{{item[1]}}</td>   
+      </tr>
+      {% endfor %}
+    </table>
+  </body>
+</html>

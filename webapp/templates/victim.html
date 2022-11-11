@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <h1>Victim</h1>
+    <p>SELECT * FROM studentalert.victim</p>
+    <p>Returns all victims from table victims</p>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <th>victim id</th>
+        <th>affiliation</th>
+        <th>description</th>
+        <th>incident id</th>
+      </tr>
+      {% for item in data %}
+      <tr>
+        <td>{{item[0]}}</td>
+        <td>{{item[1]}}</td>
+        <td>{{item[2]}}</td>
+        <td>{{item[3]}}</td>   
+      </tr>
+      {% endfor %}
+    </table>
+  </body>
+</html>

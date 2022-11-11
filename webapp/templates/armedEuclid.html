@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <h1>Armed incidents that occured on Euclid Ave.</h1>
+    <p>SELECT incidentid, incident.description, incident.date, incident.time FROM incident, location WHERE incident.armed = 1 AND incident.location_idlocation = location.idlocation AND incidentid IN (SELECT incidentid FROM incident WHERE location_idlocation = 6)</p>
+    <p>Note: Location 6 = Euclid</p>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <th>incident id</th>
+        <th>description</th>
+        <th>date</th>
+        <th>time</th>
+      </tr>
+      {% for item in data %}
+      <tr>
+        <td>{{item[0]}}</td>
+        <td>{{item[1]}}</td>
+        <td>{{item[2]}}</td>
+        <td>{{item[3]}}</td>
+      </tr>
+      {% endfor %}
+    </table>
+  </body>
+</html>

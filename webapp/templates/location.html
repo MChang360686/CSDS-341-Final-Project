@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1>Loctation</h1>
+    <p>SELECT * FROM studentalert.location</p>
+    <p>Returns all locations from table location</p>
+    <table>
+      <tr>
+        <th>location id</th>
+        <th>name</th>
+        <th>address</th>
+        <th>description</th>
+      </tr>
+      {% for item in data %}
+      <tr>
+        <td>{{item[0]}}</td>
+        <td>{{item[1]}}</td>
+        <td>{{item[2]}}</td>
+        <td>{{item[3]}}</td>   
+      </tr>
+      {% endfor %}
+    </table>
+  </body>
+</html>

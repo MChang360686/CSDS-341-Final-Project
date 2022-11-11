@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <h1>List of incidents where a vehicle was stolen</h1>
+    <p>SELECT incidentid FROM studentalert.incident, studentalert.victim, studentalert.itemstaken WHERE itemstaken.name = %s AND itemstaken.victim_idvictim = victim.idvictim AND victim.incident_incidentid = incident.incidentid""", (name,)</p>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <th>incidentid</th>
+      </tr>
+      {% for item in data %}
+      <tr>
+        <td>{{item[0]}}</td>      
+      </tr>
+      {% endfor %}
+    </table>
+  </body>
+</html>

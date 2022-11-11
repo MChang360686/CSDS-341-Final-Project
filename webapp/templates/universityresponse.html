@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <h1>University Response</h1>
+    <p>SELECT * FROM studentalert.universityresponse</p>
+    <p>Returns all responses from table universityresponse</p>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <th>response id</th>
+        <th>date</th>
+        <th>response</th>
+        <th>lasting actions</th>
+      </tr>
+      {% for item in data %}
+      <tr>
+        <td>{{item[0]}}</td>
+        <td>{{item[1]}}</td>
+        <td>{{item[2]}}</td>
+        <td>{{item[3]}}</td>   
+      </tr>
+      {% endfor %}
+    </table>
+  </body>
+</html>

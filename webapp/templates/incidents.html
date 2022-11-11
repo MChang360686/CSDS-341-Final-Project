@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <h1>Incidents</h1>
+  <p>SELECT * FROM studentalert.incident</p>
+  <p>Returns all incidents from table incident</p>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <th>incidentid</th>
+        <th>date</th>
+        <th>time</th>
+        <th>description</th>
+        <th>armed</th>
+        <th>location_id</th>
+        <th>universityresponse_id</th>
+      </tr>
+      {% for item in data %}
+      <tr>
+        <td>{{item[0]}}</td>
+        <td>{{item[1]}}</td>
+        <td>{{item[2]}}</td>
+        <td>{{item[3]}}</td>
+        <td>{{item[4]}}</td>
+        <td>{{item[5]}}</td>
+        <td>{{item[6]}}</td>        
+      </tr>
+      {% endfor %}
+    </table>
+  </body>
+</html>
